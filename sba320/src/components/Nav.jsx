@@ -1,9 +1,19 @@
   import React from 'react'
 import { Link } from 'react-router-dom'
+
+
+
+
 function Nav() {
   return (
    <>
    <div className="navbar"> 
+
+
+   <Link to="/home" >
+   Homes
+   </Link> 
+
    <Link to="/movies" >
    Movies
    </Link> 

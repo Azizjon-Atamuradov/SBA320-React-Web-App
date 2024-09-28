@@ -10,4 +10,5 @@
   width: 90vw;
   display: flex;
   justify-content: space-evenly;
+  border-radius: 50px;
 } 

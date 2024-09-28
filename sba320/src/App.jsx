@@ -1,12 +1,16 @@
 import { useState } from 'react'
 import {Route, Routes} from "react-router-dom" 
+import Movies from "./components/Movies"
+import Cartoons from "./components/Cartoons"
+import News from "./components/News"
 import './App.css'
-
+import Nav from './components/Nav'
 function App() {
   
 
   return (
     <>
+    <Nav/>
      <Routes>
 
       <Route path='/movies' element={<Movies/>}/>

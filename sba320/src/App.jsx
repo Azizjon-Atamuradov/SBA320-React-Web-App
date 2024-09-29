@@ -6,6 +6,7 @@ import Cartoons from "./components/Cartoons"
 import News from "./components/News"
 import './App.css'
 import Nav from './components/Nav'
+import Home from './components/Home'
 function App() {
   
 ///const  [apiKey, setApiKey]=useState('8eefaf63') 
@@ -40,7 +41,7 @@ const [movie, setMovie]=useState('null')
     
 
      <Routes>
-     
+      <Route path='/home' element={<Home/>} />
       <Route path='/movies' element={<Movies movie={movie} />}/>
       <Route path='/cartoons' element={<Cartoons/>} />
       <Route path='/news' element={<News/>} />

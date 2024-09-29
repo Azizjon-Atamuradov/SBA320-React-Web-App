@@ -3,13 +3,6 @@ import { useState, useEffect } from 'react'
 import Form from './Form'
 
 
-
-
-
-
-
-
-
 function Movies({}) {
     //////
     const  [apiKey, setApiKey]=useState('8eefaf63') 
@@ -29,31 +22,45 @@ function Movies({}) {
         } 
         
         useEffect(() => {
-          getMovie("Superbad")
+          getMovie("null")
         }, []) 
         ////
 
+        const loaded = () => {
+        return(
+        <>
+            <Form movieSearch={getMovie}/> 
+            <div className="title">{movie.Title}</div>
 
 
-  return (
-    <> 
+            <div className="flexer">      
+            <div className="poster"><img src={movie.Poster} alt="" /></div>
+
+             <div className="info">Genre: {movie.Genre} <hr />
+                Year: {movie.Year} <hr />
+                Country: {movie.Country} <hr />
+                Description: {movie.Plot} <hr />
+
+            </div>
+            </div>   
+            </>
+            )
+        }
+
+        /////////////////////
+        const loading = () => {
+            return(
+                <>
+                <h1>.... Still Loading Movie</h1>
+                
+                </>
+            )
+        }
+
+
+  return movie? loaded() : loading()
     
-    <Form movieSearch={getMovie}/> 
-    <div className="title">{movie.Title}</div>
-
-
-   <div className="flexer">      
-   <div className="poster"><img src={movie.Poster} alt="" /></div>
-
-     <div className="info">Genre: {movie.Genre} <hr />
-    Year: {movie.Year} <hr />
-    Country: {movie.Country} <hr />
-    Description: {movie.Plot} <hr />
-
-     </div>
-    </div>   
-    </>
-  )
+  
 }
 
 export default Movies

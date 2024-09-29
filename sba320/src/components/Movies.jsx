@@ -12,6 +12,8 @@ function Movies({}) {
 
 
     const getMovie = async(searchTerm) => { 
+
+        try { 
         const response = await fetch(
           `http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
          
@@ -19,10 +21,12 @@ function Movies({}) {
         const data = await response.json()
         console.log(data);
         setMovie(data)
-        } 
-        
+        } catch (error) {
+            console.log(error);
+        }
+    }
         useEffect(() => {
-          getMovie("null")
+          getMovie("nill")
         }, []) 
         ////
 

@@ -11,7 +11,7 @@ function Nav() {
 
 
    <Link to="/home" >
-   Homes
+   Home
    </Link> 
 
    <Link to="/movies" >

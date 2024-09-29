@@ -33,6 +33,7 @@ function Movies({}) {
         const loaded = () => {
         return(
         <>
+        <h1>Movies</h1>
             <Form movieSearch={getMovie}/> 
             <div className="title">{movie.Title}</div>
 

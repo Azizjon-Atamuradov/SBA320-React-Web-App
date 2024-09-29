@@ -1,12 +1,14 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem; 
   text-align: center;
+  background-color: black ;
+  color: aliceblue;
 }
 
 .navbar {
-  border: solid black;
+  border: solid white;
   width: 90vw;
   display: flex;
   justify-content: space-evenly;
@@ -51,12 +53,33 @@
 }
 
  
+.btn {
+  margin-top: 20px;
+}
+
+#cinema {
+  width: 600px;
+  height: 350px;
+}
 
 
+.clock-container{
+
+  
 
 
+}
 
 
+.clock {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.75);
+  
+  
+}
 
 
 

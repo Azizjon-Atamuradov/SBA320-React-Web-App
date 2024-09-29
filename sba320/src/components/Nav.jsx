@@ -22,9 +22,7 @@ function Nav() {
     Cartoons
    </Link> 
 
-   <Link to="/news" >
-    News
-   </Link> 
+ 
    
    </div>
    

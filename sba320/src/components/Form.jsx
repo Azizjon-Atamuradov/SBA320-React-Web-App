@@ -24,7 +24,7 @@ const handleSubmit = (evt) => {
   return (
    <>
    
-   <form onSubmit={handleSubmit}>
+   <form onSubmit={handleSubmit} className='btn'>
 
     <input type="text" className='searchbar' name="searchTerm" onChange={handleChange} value={formData.searchTerm}/>
     <input type="submit" value="submit" className='submitBtn' />
